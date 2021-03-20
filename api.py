@@ -4,7 +4,7 @@ from flask import request, jsonify, render_template
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
 
-# Create some test data for our catalog in the form of a list of dictionaries.
+# Create a dict for the data.
 quotes = [
     {'id': 0,
      'first_name': 'Maxine',
@@ -59,6 +59,18 @@ def filter_api():
             first_name = request.args['first_name']
             for quote in quotes:
                 if quote['first_name'].lower() == first_name.lower():
+                    results.append(quote)
+
+        elif i == 'last_name':
+            last_name = request.args['last_name']
+            for quote in quotes:
+                if quote['last_name'].lower() == last_name.lower():
+                    results.append(quote)
+
+        elif i == 'type':
+            type = request.args['type']
+            for quote in quotes:
+                if quote['type'].lower() == type.lower():
                     results.append(quote)
         else:
             return "Error: The field was not provided. Please specify an valid field in the query parameters."
