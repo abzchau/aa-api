@@ -1,6 +1,7 @@
 import flask
 from flask import request, jsonify, render_template
-import random 
+import random
+import jinja2 
 
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
