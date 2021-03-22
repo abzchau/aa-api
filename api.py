@@ -1,10 +1,11 @@
 import flask
 from flask import request, jsonify, render_template
+import random 
 
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
 
-# Create a dict for the data.
+# Create a list of dicts for the data.
 quotes = [
     {'id': 0,
      'first_name': 'Maxine',
@@ -29,7 +30,9 @@ quotes = [
 
 @app.route('/', methods=['GET'])
 def home():
-    return render_template('homepage.html')
+    quote = random.choice(quotes)
+    random_quote = quote['quote']
+    return render_template('homepage.html', random_quote=random_quote)
 
 
 @app.route('/api/v1/resources/quotes/all', methods=['GET'])
