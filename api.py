@@ -25,6 +25,18 @@ quotes = [
      'last_name': 'Lee',
      'quote': 'Empty your mind, be formless. Shapeless, like water.',
      'type': 'meditation',
+     'note': ''},
+    {'id': 3,
+     'first_name': 'Edward',
+     'last_name': 'Said',
+     'quote': 'It isn’t at all a matter of being optimistic, but rather of continuing to have faith in the ongoing and literally unending process of emancipation and enlightenment that, in my opinion, frames and gives direction to the intellectual vocation.',
+     'type': 'rebellion',
+     'note': 'Preface to Orientalism'},
+    {'id': 4,
+     'first_name': 'I.M.',
+     'last_name': 'Pei',
+     'quote': 'Stop worrying about missed opportunities and start looking for new ones.',
+     'type': 'inspirational',
      'note': ''}
 ]
 
