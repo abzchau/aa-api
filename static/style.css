@@ -1,30 +1,38 @@
-:root {
-    --pink: #fc97c9;
-    --blue: #5fbae7
-   }
-
-
 body {
-    background-color: #fc97c9;
+  background-image: linear-gradient(to bottom right, darkturquoise, khaki);
 }
 
 h1 {
     color: white;
     text-align: center;
-    margin: 2rem
+    margin: 2rem;
+    font-family: courier;
+
   }
+
+/* #header {
+  border: 2px;
+  border: solid mediumvioletred;
+} */
 
   p {
     text-align: center;
+    font-family: courier;
   }
 
   .quote {
     color: white;
     font-size: 1.4rem;
+    font-family: courier;
     /* line-height: 1.6rem;
     letter-spacing: .1rem; */
     /* text-transform: uppercase; */
     margin: 5rem;
+    text-shadow: blur-radius;
+  }
+
+  .author {
+    color: white;
   }
 
   /* #app {

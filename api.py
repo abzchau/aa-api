@@ -45,7 +45,9 @@ quotes = [
 def home():
     quote = random.choice(quotes)
     random_quote = quote['quote']
-    return render_template('homepage.html', random_quote=random_quote)
+    first_name = quote['first_name']
+    last_name = quote['last_name']
+    return render_template('homepage.html', random_quote=random_quote, first_name=first_name, last_name=last_name)
 
 
 @app.route('/api/v1/resources/quotes/all', methods=['GET'])
